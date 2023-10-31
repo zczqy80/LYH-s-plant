@@ -41,3 +41,21 @@
   <img width="925" alt="image" src="https://github.com/zczqy80/LYH-s-plant/assets/146266229/b3d66691-beba-419f-b8a2-081e93b56e1b">
 
   The code to implement the I2C communication has been uploaded to the code file.
+
+5. LCD display on Arduino
+
+   After the information is passed to the Arduino, I need to display it through the LCD1602. An LCD can display 16 by 2 characters. The LCD has multiple pins, each PIN has the following functions:
+
+   <img width="857" alt="image" src="https://github.com/zczqy80/LYH-s-plant/assets/146266229/cf587a05-bed8-449d-8508-fe383cf9b1fc">
+
+   The LCD has 4-bit and 8-bit operating modes, and in 4-bit operating mode, only four pins need to be connected as inputs. And set the other two pins to set the read/write status and Register selection bits respectively. The connection between the LCD and Arduino is as follows:
+
+   <img width="754" alt="image" src="https://github.com/zczqy80/LYH-s-plant/assets/146266229/e4639220-7bf6-4a3a-9f9e-9c1221c2d477">
+
+   After the relevant codes are load into Arduino, the display results are shown in the following figure (code already upload to github):
+
+   ![639d4d6e9eeb816c7bca4bed9d75ad0](https://github.com/zczqy80/LYH-s-plant/assets/146266229/7423f8a4-e2e7-488e-b8d0-a63645509539)
+
+
+
+
