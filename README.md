@@ -15,3 +15,21 @@
    
    <img width="215" alt="ec4286a0f30143c0cf2b718006abfe1" src="https://github.com/zczqy80/LYH-s-plant/assets/146266229/70b7afc8-671f-4a0f-9b06-c729be1c0dd9">
 <img width="270" alt="d3a71c4efc587d854a4998c3c1995fc" src="https://github.com/zczqy80/LYH-s-plant/assets/146266229/b4c79f90-773f-4141-a16e-5202fc7e0f22">
+
+3. Configure Raspberry PI to be a cloud server and gateway
+
+   According to the instructions of workshop 9-15, I used SSH to access Raspberry PI after flashing the SD card, installed InflusxDB and other software on it. To realize the operation of data visualization on web page with the Raspberry PI which as the gateway. After obtaining the API token of Raspberry PI in the InflusxDB software and completing the related Settings in Raspberry PI. The page could access data of PI through this token and display it on the web.
+
+   <img width="1167" alt="90ee7bda15e5f003f9a954fc95877bf" src="https://github.com/zczqy80/LYH-s-plant/assets/146266229/340e24e3-e256-4493-bd43-5c865d45794a">
+
+   Similarly, after the configuration file of Telegraf is completed in PI, the web page can use the Raspberry PI as a springboard to read the data which uploaded by ESP to MQTT and display it
+
+  <img width="1173" alt="ec138ef47de70f71466b254060d0ba8" src="https://github.com/zczqy80/LYH-s-plant/assets/146266229/853d6ba2-0781-4112-af13-b825bdfc35a6">
+  
+   Under Grafana, the data can be displayed more intuitively.
+
+  <img width="509" alt="9083b44bc4e6cb810ed6d632cbb82d4" src="https://github.com/zczqy80/LYH-s-plant/assets/146266229/877e4b72-1032-4934-89a6-f3aa521296f3">  
+  
+   The configuration of related files has been uploaded to the code file.
+
+   
