@@ -32,4 +32,12 @@
   
    The configuration of related files has been uploaded to the code file.
 
-   
+4. Usse I2C to realize the communication between ESP8266 and Arduino
+
+   I wanted to show the data measured by the ESP8266 in a physical way in the real world. However, the ESP does not have enough PIN connection for the output, such as the LCD screen. Therefore, I transmit the data of ESP8266 to Arduino through I2C wired connection to get enough output pin.
+
+   After connecting the ESP to the Arduino with SCL and SDA PINs of them. The Esp was set as the sending end and transmited the measured value to the Arduino which as the receiving end. The Arduino would store the received data in different addresses to achieve signal transmission between the two. The result is shown as follows:
+
+  <img width="925" alt="image" src="https://github.com/zczqy80/LYH-s-plant/assets/146266229/b3d66691-beba-419f-b8a2-081e93b56e1b">
+
+  The code to implement the I2C communication has been uploaded to the code file.
