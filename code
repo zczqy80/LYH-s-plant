@@ -144,6 +144,10 @@ void callback(char* topic, byte* payload, unsigned int length) {
   }
 
 }
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 
 
 
@@ -409,6 +413,12 @@ String SendHTML(float Temperaturestat, float Humiditystat, int Moisturestat) {
   ptr += "</html>\n";
   return ptr;
 }
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
 
 
 
@@ -555,10 +565,18 @@ String SendHTML(float Temperaturestat, float Humiditystat, int Moisturestat) {
   topic_tag = "weather-topics"
   data_format = "json"
   json_string_fields = ["altimeter_mbar","appTemp_C","barometer_mbar","cloudbase_meter","consBatteryVoltage_volt","dateTime","dayET","dayRain_cm","dewpoint_C","extraAlarm1","extraAlarm2","extraAlarm3","extraAlarm4","extraAlarm5","extraAlarm6","extraAlarm7","extraAlarm8","forecastIcon","forecastRule","heatindex_C","hourRain_cm","humidex_C","inDewpoint_C","inHumidity","insideAlarm","inTemp_C","leafWet4","maxSolarRad_Wpm2","monthET","monthRain_cm","outHumidity","outsideAlarm1","outsideAlarm2","outTemp_C","pressure_mbar","radiation_Wpm2","rain_cm","rain24_cm","rainAlarm","rainRate_cm_per_hour","soilLeafAlarm1","soilLeafAlarm2","soilLeafAlarm3","soilLeafAlarm4","stormRain_cm","sunrise","sunset","txBatteryStatus","usUnits","UV","windchill_C","windDir","windGust_kph","windGustDir","windSpeed_kph","windSpeed10_kph","yearET","yearRain_cm"]
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
-//3.1 I2C send at ESP8266 end
+
+
+
+
+
+
+
+//4.1 I2C send at ESP8266 end
 #include <Wire.h>
 
 void setup() {
@@ -586,7 +604,11 @@ void loop() {
   Serial.println("send z ok"); //sent z(moisture) at address 11
 }
 
-//3.2 I2C receive at Arduino end
+
+
+
+
+//4.2 I2C receive at Arduino end
 #include <Wire.h>
 int x,y,z; // define x(temperature), y(humidity), z(moisture)
 
@@ -628,6 +650,13 @@ void loop() {
   Serial.println("----------------------"); 
 
 }
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
 
 
 
@@ -676,6 +705,12 @@ void loop() {
   lcd.print(z);
   // display z
 }
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
 
 
 
@@ -962,6 +997,7 @@ String SendHTML(float Temperaturestat, float Humiditystat, int Moisturestat) {
   ptr += "</html>\n";
   return ptr;
 }
+
 
 
 
