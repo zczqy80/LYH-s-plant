@@ -628,3 +628,51 @@ void loop() {
   Serial.println("----------------------"); 
 
 }
+
+
+
+
+//5 LCD display on Arduino
+#include <Wire.h>
+#include <LiquidCrystal.h>
+int x,y,z; // define x(temperature), y(humidity), z(moisture)
+
+const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
+LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+
+
+void setup() {
+  Serial.begin(115200); // set rate at 115200
+  // set up the LCD's number of columns and rows:
+  lcd.begin(16, 2); 
+  // Print a message to the LCD.
+  //lcd.print("hello, world!");
+
+}
+
+void loop() {
+  x = 12;
+  y = 25;
+  z = 34;
+  // set the cursor to column 0, line 1
+  // (note: line 1 is the second row, since counting begins with 0):
+  lcd.setCursor(0, 0);
+  lcd.print("T:");
+  lcd.setCursor(3, 0);
+  lcd.print(x);
+  // display x
+
+  // set the cursor to column 8, line 1
+  lcd.setCursor(8, 0);
+  lcd.print("H:");
+  lcd.setCursor(11, 0);
+  lcd.print(y);
+  // display y
+
+  // set the cursor to column 0, line 2
+  lcd.setCursor(0, 1);
+  lcd.print("M:");
+  lcd.setCursor(3, 1);
+  lcd.print(z);
+  // display z
+}
