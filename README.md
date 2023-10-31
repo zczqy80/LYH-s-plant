@@ -56,6 +56,14 @@
 
    ![639d4d6e9eeb816c7bca4bed9d75ad0](https://github.com/zczqy80/LYH-s-plant/assets/146266229/7423f8a4-e2e7-488e-b8d0-a63645509539)
 
+6. Final part: Display measure value on LCD
 
+   The goal of the project is to use the esp8266 and the sensor to collect data and upload it to the MQTT server and display it simultaneously on the LCD screen. So the project can be divided into two parts.
 
+   The first part is ESP8266 and includes the code for Parts 2 and 4. The ESP continuously measures the data and connects to WiFi to upload the measured values to a specific topic on the MQTT server. At the same time, the measurement data is transmitted to the Arduino via I2C.
 
+   The second part is Arduino and includes the code for Parts 4 and 5. Once the Arduino receives the data, it will display the data on the LCD screen. The result is as follows:
+
+   ![1bd833abee08b486c38657bac415595](https://github.com/zczqy80/LYH-s-plant/assets/146266229/f357553f-6b79-4b56-a182-187bc57b1711)
+
+   The code for this section has been uploaded. Hopefully, more output ports can be added in the future. Such as the use of leds to indicate changes in temperature, and the addition of buzzers to remind the addition of water. That's all, thanks for your reading.
