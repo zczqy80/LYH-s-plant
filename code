@@ -1081,6 +1081,50 @@ void loop() {
 
   delay(500);
 
+  // judge for temperature
+  if(x<20){
+    lcd.setCursor(0, 1);
+    lcd.print("Low");
+  }
+  else if(x>38){
+    lcd.setCursor(0, 1);
+    lcd.print("High");
+  }
+  else {
+    lcd.setCursor(0, 1);
+    lcd.print("Good");
+  }
+
+  // judge for humidity
+  if(y<40){
+    lcd.setCursor(5, 1);
+    lcd.print("Low");
+  }
+  else if(y>60){
+    lcd.setCursor(5, 1);
+    lcd.print("High");
+  }
+  else {
+    lcd.setCursor(5, 1);
+    lcd.print("Good");
+  }
+
+  // judge for humidity
+  if(z<100){
+    lcd.setCursor(11, 1);
+    lcd.print("Low");
+  }
+  else if(z>200){
+    lcd.setCursor(11, 1);
+    lcd.print("High");
+  }
+  else {
+    lcd.setCursor(11, 1);
+    lcd.print("Good");
+  }
+
+  delay(500);
+
   if (sum != (x+y+z)){
    lcd.clear();
    sum = x + y + z;
