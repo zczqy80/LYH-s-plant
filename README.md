@@ -70,6 +70,7 @@
 
    The second part is Arduino and includes the code for Parts 4 and 5. Once the Arduino receives the data, it will display the data on the LCD screen. The result is as follows:
 
-   ![1bd833abee08b486c38657bac415595](https://github.com/zczqy80/LYH-s-plant/assets/146266229/f357553f-6b79-4b56-a182-187bc57b1711)
+![ed4160109b36ff833e37327adcda3eb](https://github.com/zczqy80/LYH-s-plant/assets/146266229/c4432ffb-22f0-486c-9346-93a6aa0bd136)
+
 
    The code for this section has been uploaded. Hopefully, more output can be added in the future. Such as the use of LEDs to indicate changes in temperature, and the addition of buzzers to remind the addition of water. That's all, thanks for your reading.
